@@ -1,32 +1,107 @@
-.App {
-  text-align: center;
+body {
+  background-color: #eaeaea;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+input {
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.app {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  margin-top: 100px;
+}
+
+button {
+  background-color: tomato;
   color: white;
+  padding: 8px 18px;
+  border: 0;
+  margin-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.pointer-on-hover:hover,
+button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.availability-button {
+  background-color: #eaeaea;
+  color: black;
+}
+
+/*************
+Worker list
+**************/
+
+.workers-list {
+   margin-bottom: 50px;
+}
+
+.worker-name {
+  margin-bottom: 5px;
+  margin-top: 22px;
+}
+
+.worker-item {
+  margin-top: 10px;
+}
+
+.worker-item span,
+.worker-item input {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+
+/*************
+Calendar
+**************/
+
+.calendar {
+  margin-top: 50px;
+}
+
+.calendar h2 {
+  padding-left: 10px;
+}
+
+.time-slots {
+  display: inline-block;
+}
+
+.calendar ul {
+  padding-left: 0;
+}
+
+.time-slots {
+  padding-right: 30px;
+  background-color: white;
+}
+
+.time-slots li {
+  list-style: none;
+  height: 20px;
+  padding: 5px 0px 5px 10px;
+}
+
+.time {
+  display: inline-block;
+  border-right: 1px solid black;
+  padding-right: 10px;
+
+}
+
+.slot {
+  float: right;
+  padding-right: 10px;
+}
+
+.unavailable {
+  background-color: #fc8585;
+}
+
+.available {
+  background-color: #b2ffb2;
 }
