@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import WorkerList from './WorkerList';
-import Calendar from './Calendar';
+import WorkerList from './components/WorkerList';
+import Calendar from './components/Calendar';
 import './App.css';
 
 class App extends Component {
