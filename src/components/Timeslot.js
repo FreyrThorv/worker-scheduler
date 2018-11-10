@@ -12,7 +12,7 @@ const Timeslot = props =>
           time={timeslot[0]}
           slot={timeslot[1]}
           showAvailabilityFor={props.showAvailabilityFor}
-          handleBookWorker={() => props.bookWorker(props.showAvailabilityFor, props.date, index)}
+          handleBookWorker={() => props.bookWorker(props.showAvailabilityFor, props.id, index)}
         />
        )}
   </ul>;

@@ -11,6 +11,7 @@ const Calendar = props =>
 	    .map((schedule, index) =>  
 	      <Timeslot 
 	      	key={index}
+	      	id={schedule.id}
 	      	timeslot={schedule.timeslot}
 	      	date={schedule.date}
 	      	showAvailabilityFor={props.showAvailabilityFor}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WorkerList from './components/WorkerList';
 import Calendar from './components/Calendar';
+import update from 'immutability-helper';
 import './App.css';
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
       ],
       schedule: [
         {
+          id: 0,
           date: 'Mon, 05 Nov 2018',
           timeslot: [
             ["08:00",[0,1,2] ],
@@ -42,6 +44,7 @@ class App extends Component {
           ]
         },
         {
+          id: 1,
           date: 'Tues, 06 Nov 2018',
           timeslot: [
             ["08:00",[1] ],
@@ -123,9 +126,20 @@ class App extends Component {
     })
   }
 
-  bookWorker = (workerId, date, indexToChange) => {
-    console.log(workerId + date + indexToChange)
-    // TODO: update the scheduler with workerID 
+  bookWorker = (workerId, dateId, indexToChange) => {
+    this.setState({
+      schedule: update(this.state.schedule, {
+        [dateId]: {
+          timeslot: {
+            [indexToChange] : {
+              [1] : {
+                $push: [workerId]
+              }
+            }
+          }
+        }
+      })
+    })
   }
 
   render() {
